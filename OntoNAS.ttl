@@ -1,0 +1,160 @@
+@prefix : <http://www.semanticweb.org/ontonas#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/ontonas#> .
+
+<http://www.semanticweb.org/ontonas> rdf:type owl:Ontology ;
+                                      owl:imports <http://purl.org/nemo/gufo#/1.0.0> .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/ontonas#algorithm
+:algorithm rdf:type owl:Class ;
+           rdfs:subClassOf <http://purl.org/nemo/gufo#FunctionalComplex> .
+
+
+###  http://www.semanticweb.org/ontonas#algorithm_metrics
+:algorithm_metrics rdf:type owl:Class ;
+                   rdfs:subClassOf <http://purl.org/nemo/gufo#FunctionalComplex> .
+
+
+###  http://www.semanticweb.org/ontonas#bayesian_optimization
+:bayesian_optimization rdf:type owl:Class ;
+                       rdfs:subClassOf :search_strategy .
+
+
+###  http://www.semanticweb.org/ontonas#candidate_architecture
+:candidate_architecture rdf:type owl:Class ;
+                        rdfs:subClassOf :neural_network .
+
+
+###  http://www.semanticweb.org/ontonas#component_temperature
+:component_temperature rdf:type owl:Class ;
+                       rdfs:subClassOf <http://purl.org/nemo/gufo#Quality> .
+
+
+###  http://www.semanticweb.org/ontonas#cpu
+:cpu rdf:type owl:Class ;
+     rdfs:subClassOf :hardware .
+
+
+###  http://www.semanticweb.org/ontonas#data
+:data rdf:type owl:Class ;
+      rdfs:subClassOf <http://purl.org/nemo/gufo#FunctionalComplex> .
+
+
+###  http://www.semanticweb.org/ontonas#dataset
+:dataset rdf:type owl:Class ;
+         rdfs:subClassOf :data .
+
+
+###  http://www.semanticweb.org/ontonas#evolutionary_algorithms
+:evolutionary_algorithms rdf:type owl:Class ;
+                         rdfs:subClassOf :search_strategy .
+
+
+###  http://www.semanticweb.org/ontonas#experiment
+:experiment rdf:type owl:Class ;
+            rdfs:subClassOf <http://purl.org/nemo/gufo#Event> .
+
+
+###  http://www.semanticweb.org/ontonas#gpu
+:gpu rdf:type owl:Class ;
+     rdfs:subClassOf :hardware .
+
+
+###  http://www.semanticweb.org/ontonas#gradient_based
+:gradient_based rdf:type owl:Class ;
+                rdfs:subClassOf :search_strategy .
+
+
+###  http://www.semanticweb.org/ontonas#hardware
+:hardware rdf:type owl:Class ;
+          rdfs:subClassOf <http://purl.org/nemo/gufo#FunctionalComplex> .
+
+
+###  http://www.semanticweb.org/ontonas#hyperparameters
+:hyperparameters rdf:type owl:Class ;
+                 rdfs:subClassOf <http://purl.org/nemo/gufo#Quality> .
+
+
+###  http://www.semanticweb.org/ontonas#hyperparameters_structure
+:hyperparameters_structure rdf:type owl:Class ;
+                           rdfs:subClassOf <http://purl.org/nemo/gufo#FunctionalComplex> .
+
+
+###  http://www.semanticweb.org/ontonas#layers
+:layers rdf:type owl:Class ;
+        rdfs:subClassOf <http://purl.org/nemo/gufo#FunctionalComplex> .
+
+
+###  http://www.semanticweb.org/ontonas#layers_hyperparameters
+:layers_hyperparameters rdf:type owl:Class ;
+                        rdfs:subClassOf <http://purl.org/nemo/gufo#Quality> .
+
+
+###  http://www.semanticweb.org/ontonas#memory_capacity
+:memory_capacity rdf:type owl:Class ;
+                 rdfs:subClassOf <http://purl.org/nemo/gufo#Quality> .
+
+
+###  http://www.semanticweb.org/ontonas#neural_network
+:neural_network rdf:type owl:Class ;
+                rdfs:subClassOf :algorithm .
+
+
+###  http://www.semanticweb.org/ontonas#neural_network_metrics
+:neural_network_metrics rdf:type owl:Class ;
+                        rdfs:subClassOf <http://purl.org/nemo/gufo#Quality> .
+
+
+###  http://www.semanticweb.org/ontonas#number_of_cores
+:number_of_cores rdf:type owl:Class ;
+                 rdfs:subClassOf <http://purl.org/nemo/gufo#Quality> .
+
+
+###  http://www.semanticweb.org/ontonas#operating_frequency
+:operating_frequency rdf:type owl:Class ;
+                     rdfs:subClassOf <http://purl.org/nemo/gufo#Quality> .
+
+
+###  http://www.semanticweb.org/ontonas#performance_estimation_strategy
+:performance_estimation_strategy rdf:type owl:Class ;
+                                 rdfs:subClassOf :algorithm_metrics .
+
+
+###  http://www.semanticweb.org/ontonas#reinforcement_learning
+:reinforcement_learning rdf:type owl:Class ;
+                        rdfs:subClassOf :search_strategy .
+
+
+###  http://www.semanticweb.org/ontonas#search_space
+:search_space rdf:type owl:Class ;
+              rdfs:subClassOf :hyperparameters_structure .
+
+
+###  http://www.semanticweb.org/ontonas#search_strategy
+:search_strategy rdf:type owl:Class ;
+                 rdfs:subClassOf :algorithm .
+
+
+###  http://www.semanticweb.org/ontonas#structure
+:structure rdf:type owl:Class ;
+           rdfs:subClassOf <http://purl.org/nemo/gufo#Quality> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/ontonas#algorithm
+:algorithm rdf:type owl:NamedIndividual ,
+                    <http://purl.org/nemo/gufo#Kind> .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
